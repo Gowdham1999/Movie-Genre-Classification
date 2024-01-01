@@ -8,9 +8,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import time
 
 # loading the saved model
-loaded_model = pickle.load(open('D:/Udemy/Data/Data_Science/Codsoft/ML Internship/1_Movie Genre Classification/Streamlit Deployment/movie_genre_classification_model.sav', 'rb'))
+loaded_model = pickle.load(open('./movie_genre_classification_model.sav', 'rb'))
 
-df_train = pd.read_csv("D:/Udemy/Data/Data_Science/Codsoft/ML Internship/1_Movie Genre Classification/Genre Classification Dataset/train_data.txt",sep=':::',names=['Title', 'Genre', 'Description']).reset_index(drop=True)
+df_train = pd.read_csv("./train_data.txt",sep=':::',names=['Title', 'Genre', 'Description']).reset_index(drop=True)
 
 def data_clean(txt):
     # Removing punctuations
